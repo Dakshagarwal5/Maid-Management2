@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="card">
+    <!-- Top-bar -->
+    <div class="card-header">
+      <nav class="top-bar">
+        <a href="/maids" class="btn secondary">Dashboard</a>
+        <a href="/maids/new" class="btn primary">Add Maid</a>
+      </nav>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+      <h1>
+        Maid Added Successfully 
+        <span class="success-icon">✔️</span>
+      </h1>
+
+      <div class="success-actions">
+        <a href="/maids" class="btn secondary">View All Maids</a>
+        <a href="/maids/new" class="btn primary">Add Another Maid</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      © 2025 Maid Management
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

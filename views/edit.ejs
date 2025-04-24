@@ -1,0 +1,90 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="card">
+
+    <!-- Top-bar -->
+    <div class="card-header">
+      <nav class="top-bar">
+        <a href="/maids"      class="btn secondary">Dashboard</a>
+        <a href="/maids/new"  class="btn primary">Add Maid</a>
+      </nav>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+      <h1>Edit Maid</h1>
+
+      <form action="/maids/<%= maid.id %>" method="POST" enctype="multipart/form-data">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Maid Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value="<%= maid.name %>"
+            placeholder="Enter maid name"
+            required
+          >
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input
+              type="tel"
+              id="mobileNumber"
+              name="mobileNumber"
+              value="<%= maid.mobileNumber %>"
+              pattern="[0-9]{10}"
+              inputmode="numeric"
+              title="Please enter a valid 10-digit mobile number"
+              required
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="houseNumber">House Number</label>
+            <input
+              type="number"
+              id="houseNumber"
+              name="houseNumber"
+              value="<%= maid.houseNumber %>"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              title="Please enter a valid house number"
+              required
+            >
+          </div>
+          
+
+        <!-- Current Aadhaar -->
+        <div class="form-group">
+          <label>Current Aadhaar:</label>
+          <a href="/uploads/<%= maid.aadhaarFile %>" target="_blank">View</a>
+        </div>
+
+        <!-- Upload New Aadhaar -->
+        <div class="form-group">
+          <label for="aadhaarFile">Upload New Aadhaar (optional)</label>
+          <input
+            type="file"
+            id="aadhaarFile"
+            name="aadhaarFile"
+          >
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn primary">Update Maid</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      © 2025 Maid Management
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>
