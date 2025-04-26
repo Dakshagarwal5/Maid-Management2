@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="/styles.css"> <!-- Corrected CSS link -->
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Dashboard</a>
-            <a href="/maids/new">Add Maid</a>
+    <header class="card-header">
+        <nav class="top-bar">
+            <a href="/" class="btn secondary">Dashboard</a>
+            <a href="/maids/new" class="btn primary">Add Maid</a>
         </nav>
     </header>
 
-    <main>
-        <h1>Maid Management Portal</h1>
-        <a href="/maids">View All Maids</a>
-        <a href="/maids/new">Add New Maid</a>
+    <main class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 style="text-align: center; color: #2a5298;">Maid Management Portal</h1>
+                <div class="top-bar" style="margin-top: 30px;">
+                    <a href="/maids" class="btn primary">View All Maids</a>
+                    <a href="/maids/new" class="btn secondary">Add New Maid</a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="card-footer">
         <p>© 2025 Maid Management</p>
     </footer>
 </body>
