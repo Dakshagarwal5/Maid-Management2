@@ -21,7 +21,7 @@ const maidSchema = new mongoose.Schema({
   },
   aadhaarCard: {
     type: String, // Store filename or file path
-    required: true,
+    required: false,
   },
 });
 

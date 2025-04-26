@@ -19,6 +19,7 @@
     "mongoose": "^8.13.2",
     "multer": "^1.4.5-lts.2",
     "mysql2": "^3.14.0",
-    "sequelize": "^6.35.1"
+    "sequelize": "^6.35.1",
+    "serve-index": "^1.9.1"
   }
 }
